@@ -76,9 +76,15 @@ if __name__ == "__main__":
         mlflow.log_metric("mae", mae)
 
         
-        # For remote server only
-        remote_server_uri = "https://dagshub.com/entbappy/MLflow-Basic-Demo.mlflow"
+        # # For remote server only (Dagshub)
+        # remote_server_uri = "https://dagshub.com/entbappy/MLflow-Basic-Demo.mlflow"
+        # mlflow.set_tracking_uri(remote_server_uri)
+
+
+        # For remote server only (AWS)
+        remote_server_uri = "http://ec2-54-147-36-34.compute-1.amazonaws.com:5000/"
         mlflow.set_tracking_uri(remote_server_uri)
+
 
 
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
