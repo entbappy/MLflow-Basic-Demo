@@ -39,9 +39,9 @@ sudo apt update
 
 sudo apt install python3-pip
 
-sudo pip3 install pipenv
+sudo apt install pipenv
 
-sudo pip3 install virtualenv
+sudo apt install virtualenv
 
 mkdir mlflow
 
